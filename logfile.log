@@ -219,3 +219,389 @@ java.lang.UnsupportedOperationException: The application must supply JDBC connec
 2016-05-19 01:42:12 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
 2016-05-19 01:42:12 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
 2016-05-19 01:42:12 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000232: Schema update complete
+2016-05-19 09:08:25 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-19 09:08:25 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.2.4.Final}
+2016-05-19 09:08:25 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2016-05-19 09:08:25 INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+2016-05-19 09:08:25 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-19 09:08:25 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-19 09:08:26 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Students.hbm.xml
+2016-05-19 09:08:26 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Users.hbm.xml
+2016-05-19 09:08:26 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2016-05-19 09:08:26 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-19 09:08:26 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+2016-05-19 09:08:26 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2016-05-19 09:08:26 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 09:08:26 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2016-05-19 09:08:28 WARN  org.hibernate.engine.jdbc.internal.JdbcServicesImpl     - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-05-19 09:08:28 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-05-19 09:08:28 INFO  org.hibernate.engine.jdbc.internal.LobCreatorBuilder     - HHH000422: Disabling contextual LOB creation as connection was null
+2016-05-19 09:08:28 INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-19 09:08:28 INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-19 09:08:29 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000228: Running hbm2ddl schema update
+2016-05-19 09:08:29 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000102: Fetching database metadata
+2016-05-19 09:08:31 ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000319: Could not get database metadata
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1129)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:358)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2489)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2526)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2311)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:347)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:204)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:505)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1790)
+	at org.hao.entity.TestStudents.testSchemaExport(TestStudents.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:308)
+	... 42 more
+2016-05-19 09:08:31 ERROR org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000299: Could not complete schema update
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1129)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:358)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2489)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2526)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2311)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:347)
+	at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:204)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:505)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1790)
+	at org.hao.entity.TestStudents.testSchemaExport(TestStudents.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:308)
+	... 42 more
+2016-05-19 09:16:05 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-19 09:16:05 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.2.4.Final}
+2016-05-19 09:16:05 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2016-05-19 09:16:05 INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+2016-05-19 09:16:05 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-19 09:16:05 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-19 09:16:05 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Students.hbm.xml
+2016-05-19 09:16:05 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Users.hbm.xml
+2016-05-19 09:16:05 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2016-05-19 09:16:06 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-19 09:16:06 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+2016-05-19 09:16:06 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2016-05-19 09:16:06 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 09:16:06 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2016-05-19 09:16:06 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-05-19 09:16:06 INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-19 09:16:06 INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-19 09:16:07 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000228: Running hbm2ddl schema update
+2016-05-19 09:16:07 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000102: Fetching database metadata
+2016-05-19 09:16:07 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000396: Updating schema
+2016-05-19 09:16:07 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: STUDENTS
+2016-05-19 09:16:07 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: USERS
+2016-05-19 09:16:07 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: STUDENTS
+2016-05-19 09:16:07 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: USERS
+2016-05-19 09:16:07 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: STUDENTS
+2016-05-19 09:16:07 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: USERS
+2016-05-19 09:16:07 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000232: Schema update complete
+2016-05-19 09:17:20 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-19 09:17:20 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.2.4.Final}
+2016-05-19 09:17:20 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2016-05-19 09:17:20 INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+2016-05-19 09:17:20 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-19 09:17:20 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-19 09:17:20 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Students.hbm.xml
+2016-05-19 09:17:20 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Users.hbm.xml
+2016-05-19 09:17:20 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2016-05-19 09:17:21 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-19 09:17:21 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+2016-05-19 09:17:21 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2016-05-19 09:17:21 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 09:17:21 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2016-05-19 09:17:21 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-05-19 09:17:21 INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-19 09:17:21 INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000228: Running hbm2ddl schema update
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000102: Fetching database metadata
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000396: Updating schema
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: student_info_management.students
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [birthday, sid, address, gender, sname]
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: student_info_management.users
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [id, username, password]
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2016-05-19 09:17:22 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000232: Schema update complete
+2016-05-19 09:19:31 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-19 09:19:31 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.2.4.Final}
+2016-05-19 09:19:31 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2016-05-19 09:19:31 INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+2016-05-19 09:19:31 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-19 09:19:31 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-19 09:19:31 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Students.hbm.xml
+2016-05-19 09:19:31 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Users.hbm.xml
+2016-05-19 09:19:31 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2016-05-19 09:19:31 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-19 09:19:31 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+2016-05-19 09:19:31 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2016-05-19 09:19:31 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 09:19:31 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2016-05-19 09:19:32 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-05-19 09:19:32 INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-19 09:19:32 INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000228: Running hbm2ddl schema update
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000102: Fetching database metadata
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000396: Updating schema
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: student_info_management.students
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [birthday, sid, address, gender, sname]
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: student_info_management.users
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [id, username, password]
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2016-05-19 09:19:32 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000232: Schema update complete
+2016-05-19 12:12:56 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-19 12:12:56 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.2.4.Final}
+2016-05-19 12:12:56 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2016-05-19 12:12:56 INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+2016-05-19 12:12:56 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: hibernate.cfg.xml
+2016-05-19 12:12:56 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: hibernate.cfg.xml
+2016-05-19 12:12:56 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Students.hbm.xml
+2016-05-19 12:12:56 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Users.hbm.xml
+2016-05-19 12:12:56 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2016-05-19 12:12:56 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-19 12:12:57 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+2016-05-19 12:12:57 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2016-05-19 12:12:57 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 12:12:57 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2016-05-19 12:12:57 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-05-19 12:12:57 INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-19 12:12:57 INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-19 12:12:57 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000228: Running hbm2ddl schema update
+2016-05-19 12:12:57 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000102: Fetching database metadata
+2016-05-19 12:12:57 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000396: Updating schema
+2016-05-19 12:12:57 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: student_info_management.students
+2016-05-19 12:12:57 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [birthday, sid, address, gender, sname]
+2016-05-19 12:12:57 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2016-05-19 12:12:57 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2016-05-19 12:12:58 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: student_info_management.users
+2016-05-19 12:12:58 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [id, username, password]
+2016-05-19 12:12:58 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2016-05-19 12:12:58 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2016-05-19 12:12:58 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000232: Schema update complete
+2016-05-19 12:18:47 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-19 12:18:47 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.2.4.Final}
+2016-05-19 12:18:47 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2016-05-19 12:18:47 INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+2016-05-19 12:18:47 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: hibernate.cfg.xml
+2016-05-19 12:18:47 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: hibernate.cfg.xml
+2016-05-19 12:18:47 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Students.hbm.xml
+2016-05-19 12:18:47 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Users.hbm.xml
+2016-05-19 12:18:47 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2016-05-19 12:18:47 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-19 12:18:47 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+2016-05-19 12:18:47 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2016-05-19 12:18:47 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 12:18:47 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2016-05-19 12:18:47 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-05-19 12:18:48 INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-19 12:18:48 INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000228: Running hbm2ddl schema update
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000102: Fetching database metadata
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000396: Updating schema
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: student_info_management.students
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [birthday, sid, address, gender, sname]
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: student_info_management.users
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [id, username, password]
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2016-05-19 12:18:48 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000232: Schema update complete
+2016-05-19 12:55:33 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-19 12:55:33 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.2.4.Final}
+2016-05-19 12:55:33 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2016-05-19 12:55:33 INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+2016-05-19 12:55:33 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-19 12:55:33 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-19 12:55:33 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Students.hbm.xml
+2016-05-19 12:55:33 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Users.hbm.xml
+2016-05-19 12:55:33 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2016-05-19 12:55:33 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-19 12:55:34 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+2016-05-19 12:55:34 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2016-05-19 12:55:34 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 12:55:34 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2016-05-19 12:55:34 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-05-19 12:55:34 INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-19 12:55:34 INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-19 12:55:34 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000228: Running hbm2ddl schema update
+2016-05-19 12:55:34 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000102: Fetching database metadata
+2016-05-19 12:55:34 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000396: Updating schema
+2016-05-19 12:55:34 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: STUDENTS
+2016-05-19 12:55:34 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: USERS
+2016-05-19 12:55:34 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: STUDENTS
+2016-05-19 12:55:34 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: USERS
+2016-05-19 12:55:34 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: STUDENTS
+2016-05-19 12:55:34 INFO  java.sql.DatabaseMetaData     - HHH000262: Table not found: USERS
+2016-05-19 12:55:36 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000232: Schema update complete
+2016-05-19 12:55:36 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-19 12:55:36 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-19 12:55:36 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Students.hbm.xml
+2016-05-19 12:55:36 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Users.hbm.xml
+2016-05-19 12:55:36 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2016-05-19 12:55:36 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-05-19 12:55:36 INFO  org.hibernate.tool.hbm2ddl.SchemaExport     - HHH000227: Running hbm2ddl schema export
+2016-05-19 12:55:36 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-19 12:55:36 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+2016-05-19 12:55:36 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2016-05-19 12:55:36 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 12:55:36 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2016-05-19 12:55:37 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 12:55:37 INFO  org.hibernate.tool.hbm2ddl.SchemaExport     - HHH000230: Schema export complete
+2016-05-19 12:58:52 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-05-19 12:58:52 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {4.2.4.Final}
+2016-05-19 12:58:52 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2016-05-19 12:58:52 INFO  org.hibernate.cfg.Environment     - HHH000021: Bytecode provider name : javassist
+2016-05-19 12:58:53 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-19 12:58:53 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-19 12:58:53 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Students.hbm.xml
+2016-05-19 12:58:53 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Users.hbm.xml
+2016-05-19 12:58:53 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2016-05-19 12:58:53 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-19 12:58:53 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+2016-05-19 12:58:53 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2016-05-19 12:58:53 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 12:58:53 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2016-05-19 12:58:53 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-05-19 12:58:54 INFO  org.hibernate.engine.transaction.internal.TransactionFactoryInitiator     - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-05-19 12:58:54 INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory     - HHH000397: Using ASTQueryTranslatorFactory
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000228: Running hbm2ddl schema update
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000102: Fetching database metadata
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000396: Updating schema
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: student_info_management.students
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [birthday, sid, address, gender, sname]
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000261: Table found: student_info_management.users
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000037: Columns: [id, username, password]
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000108: Foreign keys: []
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.TableMetadata     - HHH000126: Indexes: [primary]
+2016-05-19 12:58:54 INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate     - HHH000232: Schema update complete
+2016-05-19 12:58:55 INFO  org.hibernate.cfg.Configuration     - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2016-05-19 12:58:55 INFO  org.hibernate.cfg.Configuration     - HHH000040: Configuration resource: /hibernate.cfg.xml
+2016-05-19 12:58:55 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Students.hbm.xml
+2016-05-19 12:58:55 INFO  org.hibernate.cfg.Configuration     - HHH000221: Reading mappings from resource: org/hao/entity/Users.hbm.xml
+2016-05-19 12:58:55 INFO  org.hibernate.cfg.Configuration     - HHH000041: Configured SessionFactory: null
+2016-05-19 12:58:55 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-05-19 12:58:55 INFO  org.hibernate.tool.hbm2ddl.SchemaExport     - HHH000227: Running hbm2ddl schema export
+2016-05-19 12:58:55 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-05-19 12:58:55 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20
+2016-05-19 12:58:55 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000006: Autocommit mode: false
+2016-05-19 12:58:55 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 12:58:55 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000046: Connection properties: {user=root, password=****}
+2016-05-19 12:58:55 INFO  org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000030: Cleaning up connection pool [jdbc:mysql://localhost:3306/student_info_management]
+2016-05-19 12:58:55 INFO  org.hibernate.tool.hbm2ddl.SchemaExport     - HHH000230: Schema export complete

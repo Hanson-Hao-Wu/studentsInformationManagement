@@ -1,34 +1,53 @@
 package org.hao.entity;
+import java.util.List;
 
+import org.hao.util.HibernateUtil;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class TestStudents {
+	
 
 	@Test
-	public void testSchemaExport() {
-		
-		Configuration config = new Configuration().configure();
-		
-		ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(config.getProperties()).buildServiceRegistry();
-		SessionFactory sessionFactory = config.buildSessionFactory(serviceRegistry);
-		Session session = sessionFactory.getCurrentSession();
-		SchemaExport export = new SchemaExport(config);
-		export.create(true, true);
-		/*session.beginTransaction();
-		session.getTransaction();
-		Users u = new Users();
-		u.setUid(1);
-		u.setUsername("wuhao");
-		u.setPassword("123");
-		session.save(u);
-		
-		session.getTransaction().commit();*/
+	public void testGetSession() {
+		Session session = HibernateUtil.getSession();  
+        Assert.assertNotNull(session);  
+        HibernateUtil.closeSession();
+	}
+	
+	@Test  
+    public void testExport() {  
+        new SchemaExport(new Configuration().configure()).create(true , true);  
+    }
+	
+	@Test  
+    public void testSave() {  
+		Students student = new Students("abc123", "wuhao", "male", null, "121 Mcmahon Dr");    
+        Session session = HibernateUtil.getSession();  
+        Transaction tx = session.beginTransaction();  
+          
+        session.save(student);  
+          
+        tx.commit();  
+        HibernateUtil.closeSession();
+    }
+	@Test  
+    public void testQuery() {  
+		Session session = HibernateUtil.getSession();  
+        session.beginTransaction();  
+          
+        @SuppressWarnings("unchecked")  
+        List<Students> studentList = session.createQuery("select s from Students s").list();  
+	      
+	    for(Students eachStudent : studentList) {  
+	        System.out.println(eachStudent);
+	    }  
+	    session.getTransaction().commit();
+	    HibernateUtil.closeSession();
 	}
 
 }
