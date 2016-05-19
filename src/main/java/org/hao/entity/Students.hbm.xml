@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="org.hao.entity.Students" table="STUDENTS">
+      <meta attribute="class-description">
+         This class contains the student detail. 
+      </meta>
+      <id name="sid" type="java.lang.String" column="sid" length="8">
+         <generator class="assigned"/>
+      </id>
+      <property name="sname" column="sname" type="java.lang.String"/>
+      <property name="gender" column="gender" type="java.lang.String"/>
+      <property name="birthday" column="birthday" type="date"/>
+      <property name="address" column="address" type="java.lang.String"/>
+   </class>
+</hibernate-mapping>
