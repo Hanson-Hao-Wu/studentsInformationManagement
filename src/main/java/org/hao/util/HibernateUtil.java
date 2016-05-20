@@ -10,13 +10,12 @@ import org.hibernate.service.ServiceRegistryBuilder;
 
 public class HibernateUtil {
 
-    /** ThreadLocal Session Map */  
     public static final ThreadLocal<Session> SESSIONMAP = new ThreadLocal<Session>();  
     private static final SessionFactory sessionFactory;  
     private static final Logger LOGGER = Logger.getLogger(HibernateUtil.class);  
-  
-    static {  
-        try {  
+
+    static {
+        try {
             LOGGER.debug("HibernateUti.static - loading config"); 
             Configuration config = new Configuration().configure();
             ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(config.getProperties()).buildServiceRegistry();
@@ -29,9 +28,11 @@ public class HibernateUtil {
         }  
     }  
       
-    private HibernateUtil() {  
-          
-    }  
+    private HibernateUtil() {}  
+    
+    public static SessionFactory getSessionFactory() {
+    	return sessionFactory;
+    }
   
     public static Session getSession() throws HibernateException {  
         Session session = SESSIONMAP.get();  

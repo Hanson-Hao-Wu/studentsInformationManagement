@@ -14,30 +14,32 @@ public class TestStudents {
 
 	@Test
 	public void testGetSession() {
-		Session session = HibernateUtil.getSession();  
+		/*Session session = HibernateUtil.getSession();  
         Assert.assertNotNull(session);  
-        HibernateUtil.closeSession();
+        HibernateUtil.closeSession();*/
 	}
 	
 	@Test  
     public void testExport() {  
-        new SchemaExport(new Configuration().configure()).create(true , true);  
+        //new SchemaExport(new Configuration().configure()).create(true , true);  
     }
 	
 	@Test  
     public void testSave() {  
-		Students student = new Students("abc123", "wuhao", "male", null, "121 Mcmahon Dr");    
+		//Students student = new Students("abc123", "wuhao", "male", null, "121 Mcmahon Dr");    
+		/*Users u = new Users(2,"wuhao","222");
+		
         Session session = HibernateUtil.getSession();  
         Transaction tx = session.beginTransaction();  
           
-        session.save(student);  
+        session.save(u);  
           
         tx.commit();  
-        HibernateUtil.closeSession();
+        HibernateUtil.closeSession();*/
     }
 	@Test  
     public void testQuery() {  
-		Session session = HibernateUtil.getSession();  
+		/*Session session = HibernateUtil.getSession();  
         session.beginTransaction();  
           
         @SuppressWarnings("unchecked")  
@@ -47,7 +49,7 @@ public class TestStudents {
 	        System.out.println(eachStudent);
 	    }  
 	    session.getTransaction().commit();
-	    HibernateUtil.closeSession();
+	    HibernateUtil.closeSession();*/
 	}
 
 }
