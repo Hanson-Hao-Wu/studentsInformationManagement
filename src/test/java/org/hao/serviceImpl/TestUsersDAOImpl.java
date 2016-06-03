@@ -1,7 +1,5 @@
 package org.hao.serviceImpl;
 
-import static org.junit.Assert.*;
-
 import org.hao.entity.Users;
 import org.hao.service.UsersDAO;
 import org.hao.service.impl.UsersDAOImpl;

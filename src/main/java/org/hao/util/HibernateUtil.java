@@ -9,7 +9,8 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 public class HibernateUtil {
-
+	/*之后多线程的实现*/
+	/** ThreadLocal Session Map */
     public static final ThreadLocal<Session> SESSIONMAP = new ThreadLocal<Session>();  
     private static final SessionFactory sessionFactory;  
     private static final Logger LOGGER = Logger.getLogger(HibernateUtil.class);  
@@ -41,7 +42,7 @@ public class HibernateUtil {
             session = sessionFactory.openSession();  
             SESSIONMAP.set(session);  
         }  
-          
+
         return session;  
     }  
       
