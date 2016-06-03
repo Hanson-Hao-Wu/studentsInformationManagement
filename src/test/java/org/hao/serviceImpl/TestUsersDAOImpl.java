@@ -10,11 +10,19 @@ import org.junit.Test;
 public class TestUsersDAOImpl {
 
 	@Test
-	public void testUsersLogin() {
+	public void testUsersLoginSuccess() {
+		
+		Users u = new Users(1,"wuhao","123");
+		UsersDAO usersDAOImpl = new UsersDAOImpl();
+		Assert.assertEquals("usersDAOImpl.usersLogin", true, usersDAOImpl.usersLogin(u));
+	}
+	
+	@Test
+	public void testUsersLoginFail() {
 		
 		Users u = new Users(1,"wuhao","123456");
 		UsersDAO usersDAOImpl = new UsersDAOImpl();
-		Assert.assertEquals("usersDAOImpl.usersLogin", true, usersDAOImpl.usersLogin(u));
+		Assert.assertEquals("usersDAOImpl.usersLogin", false, usersDAOImpl.usersLogin(u));
 	}
 
 }
