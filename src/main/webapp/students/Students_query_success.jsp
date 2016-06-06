@@ -1,33 +1,47 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="/struts-tags" prefix="s"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Query Students List</title>
-</head>
-<body>
-<h1>Query Students List</h1>
-<p>hi, <%= session.getAttribute("loginUserName")%></p>
-<a href='<%=request.getContextPath() %>/students/Students_preAdd.action'>Add Student</a>
-<ul>
-	<s:iterator value="#session.students_list" var="student" status="index">
-		<li><s:property value="#student.sid" /></li>
-		<li>
-			<a href='<%=request.getContextPath() %>/students/Students_preUpdate.action?sid=<s:property value="#student.sid" />'>
-				<s:property value="#student.sname" />
-			</a>
-		</li>
-		<li><s:property value="#student.gender" /></li>
-		<li><s:date name="#student.birthday" format="yyyy-MM-dd" /></li>
-		<li><s:property value="#student.address" /></li>
-		<li>
-			<a href='<%=request.getContextPath() %>/students/Students_delete.action?sid=<s:property value="#student.sid" />'>
-				Delete
-			</a>
-		</li>
-	</s:iterator>
-</ul>
-</body>
-</html>
+<%@include file="/include/header.jsp"%>
+
+<div class="row">
+	<div class="col s12 m10 l8 offset-m1 offset-l2">
+		<h3>Query Students List</h3>
+		<p>
+			hi,
+			<%=session.getAttribute("loginUserName")%></p>
+		<a
+			href='<%=request.getContextPath()%>/students/Students_preAdd.action'>Add
+			Student</a>
+		<table class="responsive-table">
+			<thead>
+				<tr>
+					<th data-field="sid">Student ID</th>
+					<th data-field="sname">Name</th>
+					<th data-field="gender">Gender</th>
+					<th data-field="birthday">Birthday</th>
+					<th data-field="address">Address</th>
+					<th data-field="delete">Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<s:iterator value="#session.students_list" var="student"
+					status="sindex">
+
+					<tr class="s-row-<s:property value='#sindex.index + 1'/>">
+						<td><s:property value="#student.sid" /></td>
+						<td><a
+							href='<%=request.getContextPath()%>/students/Students_preUpdate.action?sid=<s:property value="#student.sid" />'>
+								<s:property value="#student.sname" />
+						</a></td>
+						<td><s:property value="#student.gender" /></td>
+						<td><s:date name="#student.birthday" format="yyyy-MM-dd" /></td>
+						<td><s:property value="#student.address" /></td>
+						<td><a
+							href='<%=request.getContextPath()%>/students/Students_delete.action?sid=<s:property value="#student.sid" />'>
+								Delete </a></td>
+					</tr>
+
+				</s:iterator>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<%@include file="/include/footer.jsp"%>
