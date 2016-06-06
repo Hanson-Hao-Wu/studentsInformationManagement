@@ -3,13 +3,11 @@
 <div class="row">
 	<div class="col s12 m10 l8 offset-m1 offset-l2">
 		<h3>Query Students List</h3>
-		<p>
-			hi,
-			<%=session.getAttribute("loginUserName")%></p>
-		<a
-			href='<%=request.getContextPath()%>/students/Students_preAdd.action'>Add
-			Student</a>
-		<table class="responsive-table">
+		<p>Hi, <%=session.getAttribute("loginUserName")%></p>
+		<a href='<%=request.getContextPath()%>/students/Students_preAdd.action' class="waves-effect waves-light btn">
+			<i class="material-icons left">add</i>Add Student
+		</a>
+		<table class="responsive-table highlight">
 			<thead>
 				<tr>
 					<th data-field="sid">Student ID</th>
