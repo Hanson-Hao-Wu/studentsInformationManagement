@@ -14,5 +14,6 @@ public interface StudentsDAO {
 	
 	public boolean updateStudents(Students s);
 	
-	public boolean deleteStudents(Students s);
+	public boolean deleteStudents(String sid);
+	
 }

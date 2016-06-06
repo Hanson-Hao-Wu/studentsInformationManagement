@@ -11,6 +11,9 @@ import org.hibernate.Session;
 
 public class StudentsDAOImpl implements StudentsDAO {
 
+	/**
+	 * List all the students
+	 */
 	public List<Students> queryAllStudents() {
 		List<Students> StudentsList = null;
 		Session session = null;
@@ -40,10 +43,35 @@ public class StudentsDAOImpl implements StudentsDAO {
 			}
 		}
 	}
+	
+	/**
+	 * select one student by sid
+	 */
 
 	public Students queryStudentsBySid(String sid) {
-		// TODO Auto-generated method stub
-		return null;
+		Session session = null;
+		try {
+			
+			session = HibernateSessionFactory.getSessionFactory().openSession();
+			session.beginTransaction();
+			Students s = (Students)session.get(Students.class, sid);
+			session.getTransaction().commit();
+			return s;
+		}
+		catch(HibernateException ex) {
+			
+			ex.printStackTrace();
+			if(session != null) {
+				session.getTransaction().rollback();
+			}
+			return null;
+		}
+		finally {
+			
+			if(session != null) {
+				session.close();
+			}
+		}
 	}
 
 	public boolean addStudents(Students s) {
@@ -99,12 +127,13 @@ public class StudentsDAOImpl implements StudentsDAO {
 		}
 	}
 
-	public boolean deleteStudents(Students s) {
+	public boolean deleteStudents(String sid) {
 		Session session = null;
 		try {
 			
 			session = HibernateSessionFactory.getSessionFactory().openSession();
 			session.beginTransaction();
+			Students s = (Students)session.get(Students.class, sid);
 			session.delete(s);
 			session.getTransaction().commit();
 			return true;

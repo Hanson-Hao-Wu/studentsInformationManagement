@@ -1,5 +1,8 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Loading</h2>
+<%
+	response.sendRedirect("users/Users_login.jsp");
+%>
 </body>
 </html>
