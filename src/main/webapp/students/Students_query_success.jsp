@@ -9,6 +9,7 @@
 </head>
 <body>
 <h1>Query Students List</h1>
+<p>hi, <%= session.getAttribute("loginUserName")%></p>
 <a href='<%=request.getContextPath() %>/students/Students_preAdd.action'>Add Student</a>
 <ul>
 	<s:iterator value="#session.students_list" var="student" status="index">

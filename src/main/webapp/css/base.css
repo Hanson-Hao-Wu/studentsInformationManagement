@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+.page-wrap {}
+nav{
+	padding: 0 30px;
+	font-weight: bold;
+}
+.section{
+	width: 1200px;
+	margin: 0 auto;
+	min-height: 350px;
+}
