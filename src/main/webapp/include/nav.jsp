@@ -49,6 +49,7 @@
 			</s:if>
 			<s:else>
 				<li><a href="<%=request.getContextPath() %>">Login</a></li>
+				<li><a href="<%=request.getContextPath() %>/users/Users_preEnroll.action">Enroll</a></li>
 			</s:else>
 		</ul>
 	</div>
