@@ -34,7 +34,11 @@
 			</div>
 			<div class="row">
 				<div class="input-field">
-					<select name="role">
+					<select name="role" 
+						<s:if test='#session.updateUser.role!="admin"'>
+							disabled
+						</s:if>
+						>
 						<s:if test='#session.updateUser.role=="admin"'>
 							<option value="admin" selected>admin</option>
 							<option value="normal">normal</option>
@@ -49,8 +53,12 @@
 			</div>
 			<div class="row">
 				<div class="input-field">
-					<select name="stutas">
-						<s:if test='#session.updateUser.stutas=="active"'>
+					<select name="stutas" 
+						<s:if test='#session.updateUser.role != "admin"'>
+							disabled
+						</s:if>
+						>
+						<s:if test='#session.updateUser.stutas == "active"'>
 							<option value="active" selected>active</option>
 							<option value="inactive">inactive</option>
 						</s:if>
@@ -66,12 +74,6 @@
 				<div>
 					<button class="btn waves-effect waves-light col s12" type="submit" name="action">
 						Update <i class="material-icons right">send</i>
-					</button>
-				</div>
-			</div>
-			<div class="row">
-				<div>
-					<button class="btn waves-effect waves-light col s12" type="reset" name="action"> Reset <i class="material-icons right">settings_backup_restore</i>
 					</button>
 				</div>
 			</div>

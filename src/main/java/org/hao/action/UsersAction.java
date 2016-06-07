@@ -16,12 +16,35 @@ public class UsersAction extends SuperAction implements ModelDriven<Users>{
 	
 	public String login() {
 		UsersDAO udao = new UsersDAOImpl();
-		if(udao.usersLogin(user)) {
-			session.setAttribute("loginUser", user);
+		if(udao.usersLogin(user) > 0) {
+			session.setAttribute("loginUser", udao.queryUsersByUid(udao.usersLogin(user)));
 			return "login_success";
 		}
 		else {
 			return "login_failure";
+		}
+	}
+	
+	public String preEnroll() {
+		
+		return "preEnroll_success";
+	}
+	
+	public String enroll() {
+		
+		UsersDAO udao = new UsersDAOImpl();
+		if (user.getUsername()==null || user.getPassword()==null || "".equals(user.getUsername()) || "".equals(user.getPassword())) {
+			return "enroll_failure";
+		}
+		if(udao.usersLogin(user) == -1){
+			
+			udao.addUser(user);
+			session.setAttribute("loginUser", udao.queryUsersByUid(udao.usersLogin(user)));
+			return "enroll_success";
+		}
+		else{
+			
+			return "enroll_failure";
 		}
 	}
 	

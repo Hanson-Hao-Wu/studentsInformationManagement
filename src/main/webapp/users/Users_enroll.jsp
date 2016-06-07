@@ -1,13 +1,11 @@
 <%@include file="/include/header.jsp"%>
-<s:if test="#session.loginUser != null">
-	<jsp:forward page="/users/Users_login_success.jsp"></jsp:forward>
-</s:if>
+
 <div class="row">
 	<div class="col s12 m8 l6 offset-m2 offset-l3">
 		<div class="row">
-			<h3>User Login</h3>
+			<h3>User Enroll</h3>
 		</div>
-		<form action="<%=request.getContextPath()%>/users/Users_login.action">
+		<form action="<%=request.getContextPath()%>/users/Users_enroll.action">
 			<div class="row">
 				<div class="input-field">
 					<label for="username">Username</label>

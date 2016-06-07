@@ -24,6 +24,9 @@
 			<result name="delete_success" type="chain">Users_list</result>
 			<result name="preUpdate_success">/users/Users_update.jsp</result>
 			<result name="update_success" type="chain">Users_list</result>
+			<result name="preEnroll_success">/users/Users_enroll.jsp</result>
+			<result name="enroll_success">/users/Users_login.jsp</result>
+			<result name="enroll_failure">/users/Users_enroll.jsp</result>
 			<!-- <result name="input">/users/Users_login.jsp</result> -->
 		</action>
 	</package>

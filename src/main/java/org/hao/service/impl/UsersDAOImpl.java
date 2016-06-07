@@ -95,23 +95,24 @@ public class UsersDAOImpl implements UsersDAO {
 		}
 	}
 
-	public boolean usersLogin(Users u) {
+	public int usersLogin(Users u) {
 		Session session = null;
 		String hql = "";
 		try {
 			
 			session = HibernateSessionFactory.getSessionFactory().openSession();
 			session.beginTransaction();
-			hql = "from Users where username = ? and password = ? ";
+			hql = "select u.uid from Users u where username = ? and password = ? ";
 			Query query = session.createQuery(hql);
 			query.setParameter(0, u.getUsername());
 			query.setParameter(1, u.getPassword());
 			List list = query.list();
 			session.getTransaction().commit();
 			if(list.size() > 0){
-				return true;
+				int uid = (Integer)list.get(0);
+				return uid;
 			}else{
-				return false;
+				return -1;
 			}
 		}
 		catch(HibernateException ex) {
@@ -120,7 +121,7 @@ public class UsersDAOImpl implements UsersDAO {
 			if(session != null) {
 				session.getTransaction().rollback();
 			}
-			return false;
+			return -1;
 		}
 		finally {
 			

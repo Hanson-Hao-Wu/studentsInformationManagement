@@ -6,7 +6,7 @@ import org.hao.entity.Users;
 
 public interface UsersDAO {
 
-	public boolean usersLogin(Users u);
+	public int usersLogin(Users u);
 	public Users queryUsersByUid(int uid);
 	public boolean addUser(Users u);
 	public boolean deleteUser(int uid);
