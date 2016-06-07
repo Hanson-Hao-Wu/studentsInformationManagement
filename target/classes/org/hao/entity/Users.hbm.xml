@@ -13,5 +13,8 @@
       </id>
       <property name="username" column="username" type="java.lang.String"/>
       <property name="password" column="password" type="java.lang.String"/>
+      <property name="email" column="email" type="java.lang.String"/>
+      <property name="role" column="role" type="java.lang.String"/>
+      <property name="stutas" column="stutas" type="java.lang.String"/>
    </class>
 </hibernate-mapping>

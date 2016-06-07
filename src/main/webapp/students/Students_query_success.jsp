@@ -3,7 +3,7 @@
 <div class="row">
 	<div class="col s12 m10 l8 offset-m1 offset-l2">
 		<h3>Query Students List</h3>
-		<p>Hi, <%=session.getAttribute("loginUserName")%></p>
+		<p>Hi, <s:property value="#session.loginUser.username"/></p>
 		<a href='<%=request.getContextPath()%>/students/Students_preAdd.action' class="waves-effect waves-light btn">
 			<i class="material-icons left">add</i>Add Student
 		</a>

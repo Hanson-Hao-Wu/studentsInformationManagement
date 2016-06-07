@@ -29,7 +29,7 @@ public class TestHibernateSessionFactory {
 		try {
 			session = sessionFactory.openSession();
 			session.beginTransaction();
-			Users u = new Users(3, "xiechen-2", "abc123");
+			Users u = new Users(2, "xiechen-2", "abc123","abc.gmail.com",null,null);
 			session.save(u);
 			session.getTransaction().commit();
 		} catch (HibernateException e) {

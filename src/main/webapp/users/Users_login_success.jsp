@@ -4,7 +4,7 @@
 		<h3>User Login Success</h3>
 
 		<p class="header">
-			hi, <%=session.getAttribute("loginUserName")%>. Welcome back!
+			hi, <s:property value="#session.loginUser.username"/>. Welcome back!
 		</p>
 		<div class="collection">
 			<a href="<%=request.getContextPath()%>/students/Students_query.action" class="collection-item active">Students List</a>

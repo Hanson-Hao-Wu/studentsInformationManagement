@@ -40,15 +40,7 @@
 						</button>
 					</div>
 				</div>
-				<div class="row">
-					<div>
-						<button class="btn waves-effect waves-light col s12" type="reset" name="action">
-							Reset <i class="material-icons right">settings_backup_restore</i>
-						</button>
-					</div>
-				</div>
 			</form>
-
 		</div>
 	</div>
 </div>
