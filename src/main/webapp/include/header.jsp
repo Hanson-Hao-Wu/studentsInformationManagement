@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/materialize.css">
 <link href="http://fonts.googleapis.com/icon?family=Material+Icons"	rel="stylesheet">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/base.css">
